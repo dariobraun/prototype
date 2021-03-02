@@ -1,0 +1,6 @@
+<h1>Micro Frontends in Stock</h1>
+<app-item
+  *ngFor="let mf of microFrontends"
+  [microFrontendItem]="mf"
+  (itemClicked)="sendItemToCart(mf)"
+></app-item>

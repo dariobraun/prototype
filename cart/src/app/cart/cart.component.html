@@ -1,0 +1,22 @@
+<table class="table">
+  <tr>
+    <th></th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Price</th>
+  </tr>
+  <tr *ngFor="let item of cartItems | async">
+    <td class="align-middle">
+      <img src="assets/images/{{ item.imgSrc }}" alt="{{ item.name }} Logo" />
+    </td>
+    <td class="align-middle">
+      <h3>{{ item.name }}</h3>
+    </td>
+    <td class="align-middle">
+      <h3>{{ item.descr }}</h3>
+    </td>
+    <td class="align-middle">
+      <h3>${{ item.price }}</h3>
+    </td>
+  </tr>
+</table>

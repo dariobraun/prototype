@@ -1,0 +1,18 @@
+<div class="app-shell">
+  <nav>
+    <ul class="nav-list">
+      <li class="nav-item"><a routerLink="home">Home</a></li>
+      <li class="nav-item"><a routerLink="menu">Menu</a></li>
+      <li class="nav-item cart">
+        <a [routerLink]="['cart']" [queryParams]="{ name: 'Angular' }">
+          Cart
+        </a>
+      </li>
+      <li *ngIf="url.includes('/cart')" class="nav-item">
+        <app-buy-template></app-buy-template>
+      </li>
+      <li id="container" class="nav-item"></li>
+    </ul>
+  </nav>
+  <router-outlet (itemClicked)="sendItemToCart($event)"></router-outlet>
+</div>
